@@ -8,10 +8,10 @@
 
 ```php
 return [
-	'host' => 'localhost',
-	'dbname' => 'test',
-	'user' => 'root',
-	'password' => 'root'
+    'host' => 'localhost',
+    'dbname' => 'test',
+    'user' => 'root',
+    'password' => 'root'
 ];
 ```
 Где 
@@ -25,17 +25,17 @@ return [
 Оператор **INSERT**
 ```php
 echo $database->query(
-	'INSERT INTO users(email, password) VALUES(:email, :password)',
-	[
-		':email' => $email,
-		':password' => $password
-	]);
+    'INSERT INTO users(email, password) VALUES(:email, :password)',
+        [
+            ':email' => $email,
+            ':password' => $password
+        ]);
 ```
 Оператор **SELECT** *c фильтрацией* данных
 ```php
 var_dump($database->query(
-	'SELECT id FROM users WHERE email = :email',
-	[':email' => $email]
+    'SELECT id FROM users WHERE email = :email',
+    [':email' => $email]
 ));
 ```
 Оператор **SELECT** *без фильтрации* данных
